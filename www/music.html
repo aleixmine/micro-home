@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Micro-Home · Music</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <script defer src="/js/music.js"></script>
+  <script defer src="/js/navbar.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container is-max-tablet">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-primary has-text-weight-bold" href="/">
+            Micro Home
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-home">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbar-home" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="/climate">
+              Climate
+            </a>
+            <a class="navbar-item has-text-link" href="/music">
+              Music
+            </a>
+            <a class="navbar-item" href="/about">
+              About
+            </a>
+          </div>
+      </nav>
+      <hr>
+      <div class="container">
+        <div class="box border success">
+          <div class="content">
+            <h3>Now playing</h3>
+            <span class="is-size-2 has-text-success has-text-weight-extrabold" id="now">Nothing playing</span>
+            <div class="controls">
+              <button class="mt-2 button is-danger is-invisible" id="btn-stop">Stop</button>
+            </div>
+          </div>
+        </div>
+        <div class="container is-flex is-flex-direction-column file-list" id="file-list">
+          <div class="box">
+            Loading files…
+          </div>
+        </div>
+
+        <div id="msg"></div>
+      </div>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <hr>
+            <strong>Micro Home</strong> by <a href="https://aleixmine.github.io">aleixmine</a>.
+            The source code is licensed
+            <a href="https://opensource.org/license/mit">MIT</a>
+          </p>
+        </div>
+      </footer>
+  </section>
+  </div>
+</body>
+
+</html>

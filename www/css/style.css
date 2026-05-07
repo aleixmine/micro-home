@@ -1,0 +1,55 @@
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #3fb950;
+    animation: pulse 2s infinite;
+}
+
+.dot.error {
+    background: #f85149;
+    animation: none;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0.3
+    }
+}
+
+:root {
+    --danger: hsl(var(--bulma-danger-h), var(--bulma-danger-s), var(--bulma-danger-l));
+    --info: hsl(var(--bulma-info-h), var(--bulma-info-s), var(--bulma-info-l));
+    --success: hsl(var(--bulma-success-h), var(--bulma-success-s), var(--bulma-success-l));
+}
+
+.border {
+    border-top: 0.2rem solid #000
+}
+
+.border.danger {
+    border-color: var(--danger);
+}
+
+.border.info {
+    border-color: var(--info);
+}
+
+.border.success {
+    border-color: var(--success);
+}
+
+.file-item:hover {
+      border: 0.1rem solid var(--bulma-info-on-scheme);
+    }
+
+    .file-item.playing {
+      border: 0.1rem solid var(--bulma-success-on-scheme);
+    }

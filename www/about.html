@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Micro-Home · Music</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <script defer src="/js/navbar.js"></script>
+  <script defer src="/js/about.js"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container is-max-tablet">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item has-text-primary has-text-weight-bold" href="/">
+            Micro Home
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-home">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbar-home" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="/climate">Climate</a>
+            <a class="navbar-item" href="/music">Music</a>
+            <a class="navbar-item has-text-link" href="/about">About</a>
+          </div>
+        </div>
+      </nav>
+
+      <hr>
+      <h3 class="title is-3">SYSTEM</h3>
+      <div class="box">
+        <table class="table is-narrow is-fullwidth">
+          <thead>
+          </thead>
+          <tfoot>
+          </tfoot>
+          <tbody class="system">
+            <tr>
+              <th>Platform</th>
+              <td><span class="platform"></span></td>
+            </tr>
+            <tr>
+              <th>MicroPython</th>
+              <td><span class="micropython"></span></td>
+            </tr>
+            <tr>
+              <th>CPU</th>
+              <td><span class="cpu"></span></td>
+            </tr>
+            <tr>
+              <th>Uptime</th>
+              <td><span class="uptime"></span></td>
+            </tr>
+            <tr>
+              <th>Last reset</th>
+              <td><span class="lastreset"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="title is-3">CHIP TEMPERATURE</h3>
+      <div class="columns temp">
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h3>Celsius</h3>
+              <div class="value has-text-info is-size-1 has-text-weight-extrabold" id="temp"><span
+                  class="cel"></span>&deg;C</div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h3>Fahrenheit</h3>
+              <div class="value has-text-info is-size-1 has-text-weight-extrabold" id="hum"><span
+                  class="fah"></span>&deg;F</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="title is-3">RAM</h3>
+      <div class="columns ram">
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h3>Used</h3>
+              <div class="value has-text-info is-size-1 has-text-weight-extrabold" id="ram-used">
+                <span class="used"></span>KB
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h3>Free</h3>
+              <div class="value has-text-info is-size-1 has-text-weight-extrabold" id="ram-free">
+                <span class="free"></span>KB
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box">
+            <div class="content">
+              <h3>Total</h3>
+              <div class="value has-text-info is-size-1 has-text-weight-extrabold" id="ram-total">
+                <span class="total"></span>KB
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="title is-3">STORAGE</h3>
+      <div class="columns">
+        <div class="column">
+          <div class="box flash">
+            <div class="content">
+              <h3>Flash (internal)</h3>
+              <div class="value has-text-info is-size-1 has-text-weight-extrabold" id="storage-flash">
+                <span class="used"></span>KB / <span class="total"></span>KB
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box sd">
+            <div class="content">
+              <h3>SD card</h3>
+              <div class="value has-text-info is-size-1 has-text-weight-extrabold" id="storage-sd">
+                <span class="used"></span>KB / <span class="total"></span>KB
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="title is-3">NETWORK</h3>
+      <div class="columns">
+        <div class="column">
+          <div class="box sta">
+
+            <div class="content">
+              <h3>Wi-Fi STA</h3>
+              <table class="table is-narrow is-fullwidth">
+                <thead>
+                </thead>
+                <tfoot>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>Status</th>
+                    <td><span class="status"></span></td>
+                  </tr>
+                  <tr>
+                    <th>IP</th>
+                    <td><span class="ip"></span></td>
+                  </tr>
+                  <tr>
+                    <th>Netmask</th>
+                    <td><span class="netmask"></span></td>
+                  </tr>
+                  <tr>
+                    <th>Gateway</th>
+                    <td><span class="gateway"></span></td>
+                  </tr>
+                  <tr>
+                    <th>DNS</th>
+                    <td><span class="dns"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box ap">
+            <div class="content">
+              <h3>Wi-Fi AP</h3>
+              <table class="table is-narrow is-fullwidth">
+                <thead>
+                </thead>
+                <tfoot>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <th>Status</th>
+                    <td><span class="status"></span></td>
+                  </tr>
+                  <tr>
+                    <th>IP</th>
+                    <td><span class="ip"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <hr>
+          <p>
+            <strong>Micro Home</strong> by <a href="https://aleixmine.github.io">aleixmine</a>.
+            The source code is licensed
+            <a href="https://opensource.org/license/mit">MIT</a>
+          </p>
+        </div>
+      </footer>
+
+    </div>
+  </section>
+</body>
+
+</html>
